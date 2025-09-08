@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Event Enquiry Form</title>
+        <script src="eventform.js"></script>
+        <style>
+             form {
+                 max-width: 650px;
+                 margin: auto;
+                 padding: 20px;
+                 border: 1px solid #3f3d3d;
+                 border-radius: 10px;
+             }
+             label{
+                 font-family: 'Times New Roman', serif;
+                 font-size: 16px;
+                 color: #0d0c0c;
+                 display: inline-block;
+                 width: 150px;
+                 text-align: left;
+                 margin-left: 5px;
+             }
+
+             .information label{
+                 font-family: 'Times New Roman', serif;
+                 font-size: 16px;
+                 color: #0d0c0c;
+                 display: inline-block;
+                 width: 150px;
+                 text-align: left;
+                 margin-left: 5px;
+             }
+             .information input{
+                 font-size: 14px;
+                 color: #333;
+             }
+             .information input[type="text"] {
+                 padding: 2px;
+                 border: 1px solid #0d0c0c;
+                 border-radius: 3px;
+                 margin-bottom: 5px;
+             }
+             .information input[type="email"]{
+                 padding: 2px;
+                 border: 1px solid #0d0c0c;
+                 border-radius: 3px;
+                 margin-bottom: 5px;
+             }
+
+             .event label{
+                 font-family: 'Times New Roman', serif;
+                 font-size: 16px;
+                 color: #0d0c0c;
+                 display: inline-block;
+                 width: 150px;
+                 text-align: left;
+                 margin-left: 5px;
+             }
+            .event select{
+                 padding: 2px;
+                 border: 1px solid #0d0c0c;
+                 border-radius: 3px;
+                 margin-bottom: 5px;
+             }
+           
+             .checkbox label[for="Category"]{
+                 font-family: 'Times New Roman', serif;
+                 font-size: 16px;
+                 color: #0d0c0c;
+                 display: inline-block;
+                 width: 150px;
+                 text-align: left;
+                 margin-left: 5px;
+             }
+             .checkbox #activities{
+                 margin-left: 163px;
+             }
+             .checkbox #fees{
+                 margin-left: 163px;
+             }
+             .checkbox #rules{
+                 margin-left: 163px;
+             }
+             
+             .detailed label{
+                 font-family: 'Times New Roman', serif;
+                 font-size: 16px;
+                 color: #0d0c0c;
+                 display: inline-block;
+                 width: 150px;
+                 text-align: left;
+                 margin-left: 5px;
+                 vertical-align: top;
+             }
+             textarea {
+                 width: 350px; 
+                 height: 150px;
+                 border: 1px solid #000;
+                 padding: 5px;
+                 box-sizing: border-box;
+                 border-radius: 2px;
+             }
+
+             textarea::placeholder {
+                 color: #333;
+             }
+
+            .button{
+                 margin-left: 165px;
+                 padding: 2px;
+             }
+
+        </style>
+    </head>
+    <body>
+        <form>  
+            <h1 align="center">Event Enquiry Form</h1>
+
+            <div class="information">
+                 <label for="fullName"><b>Full Name:</b></label>
+                 <input type="text" id="fullName" placeholder="Enter Your Name" size="43"><br>
+                 <label for="email"><b>Email:</b></label>
+                 <input type="email" id="email" name="email" placeholder="Enter Correct Email Format" size="43"><br>
+            </div>
+
+            <div class="event">
+                 <label for="event"><b>Interested Event:</b></label>
+                 <select id="event" name="event" size="1">
+                 <option value="1" disabled selected>Select Your Interested Event</option>
+                 <option value="Charity Run">Charity Run</option>
+                 <option value="Music Liveshow">Music Liveshow</option>
+                 </select>
+            </div>
+
+            <div class="checkbox">  
+                 <label for="Category"><b>Category of Enquiry:</b></label>
+                 <input type="checkbox" id="join" name="join" value="To Join">
+                 <label for="join">To join</label><br><br>
+                 <input type="checkbox" id= "activities" name= "activities" value="Event Activities"> 
+                 <label for="activities">Event Activities</label><br><br>
+                 <input type="checkbox" id= "fees" name="fees" value="Registration Fees">
+                 <label for="fees">Registration Fees</label><br><br>
+                 <input type="checkbox" id="rules" name="rules" value="Rules and Guidelines">
+                 <label for="rules">Rules and Guidelines</label><br><br>
+                 </div>
+          
+            <div class="detailed">
+                 <label for="detailed-enquiry"><b>Detailed Enquiry:</b></label>
+                 <textarea id="detailed-enquiry" wrap="hard" placeholder="Type here........." ></textarea><br>
+            </div>
+
+            <div class="button">
+                 <button type="submit" name="submit" onclick="send()">SUBMIT</button>
+                 <button type="reset" name="cancel">CANCEL</button>
+            </div>
+        </form>
+    </body>
+</html>
